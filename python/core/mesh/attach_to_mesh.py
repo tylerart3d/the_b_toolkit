@@ -13,14 +13,14 @@ class AttachToMesh(object):
 
         Args:
             transforms (list): List of transforms to attach to mesh
-
+            group (bool): Group follicles
         """
 
         # Load plugin
         if not pm.pluginInfo('nearestPointOnMesh', q=1, l=1):
             try:
                 pm.loadPlugin('nearestPointOnMesh')
-            except:
+            except RuntimeError:
                 self.logger.error('Cannot load "nearestPointOnMesh" plugin. attach_to_mesh cannot be ran')
                 return
 
