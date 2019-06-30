@@ -2,9 +2,12 @@ import pymel.core as pm
 
 import spherize
 import raycast
+import attach_to_mesh
+
 
 class MeshBase(spherize.Spherize,
-               raycast.Raycast):
+               raycast.Raycast,
+               attach_to_mesh.AttachToMesh):
     pass
 
 
