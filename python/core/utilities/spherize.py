@@ -7,6 +7,12 @@ import logging
 
 
 def main(radius=10):
+    """Projects all verts into a sphere based around pivot with provided radius.
+
+    Args:
+        radius (float): Radius of sphere
+
+    """
     selection = pm.ls(sl=1, fl=1)
     if not selection:
         logging.error('Select object to spherize')

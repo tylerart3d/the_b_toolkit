@@ -1,10 +1,10 @@
 import pymel.core as pm
 
-
 import spherize
+import raycast
 
-
-class MeshBase(spherize.Spherize):
+class MeshBase(spherize.Spherize,
+               raycast.Raycast):
     pass
 
 
