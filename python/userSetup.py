@@ -17,5 +17,9 @@ def initialize():
     factories.registerVirtualClass(TMesh, nameRequired=False)
     logger.info("Registered virtual classes")
 
+    # Setup command port
+    if not pm.commandPort(':4434', q=True):
+        pm.commandPort(n=':4434')
+
 
 initialize()

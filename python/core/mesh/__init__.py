@@ -3,11 +3,12 @@ import pymel.core as pm
 import spherize
 import raycast
 import attach_to_mesh
-
+import voronoi
 
 class MeshBase(spherize.Spherize,
                raycast.Raycast,
-               attach_to_mesh.AttachToMesh):
+               attach_to_mesh.AttachToMesh,
+               voronoi.Voronoi):
     pass
 
 
