@@ -21,7 +21,7 @@ class AttachToMesh(object):
             try:
                 pm.loadPlugin('nearestPointOnMesh')
             except RuntimeError:
-                self.logger.error('Cannot load "nearestPointOnMesh" plugin. attach_to_mesh cannot be ran')
+                logger.error('Cannot load "nearestPointOnMesh" plugin. attach_to_mesh cannot be ran')
                 return
 
         node = pm.createNode('nearestPointOnMesh')
